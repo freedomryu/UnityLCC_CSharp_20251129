@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1382480940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382480942}
+  - component: {fileID: 1382480941}
+  m_Layer: 0
+  m_Name: "\u7DF4\u7FD2_2_\u8CC7\u6599\u985E\u578B"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1382480941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382480940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d17837474632814db28d5e5fe19834c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  i1: 7.7
+  i2: 0.12345000356435776
+--- !u!4 &1382480942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382480940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541779461
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +215,11 @@ MonoBehaviour:
   character: "\u84CB\u502B"
   isDead: 0
   gameOver: 1
+  lv: 16
+  coin: 9999
+  item: 3000
+  playerName: KID
+  a: 97
 --- !u!1 &2122971266
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,3 +318,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 2122971269}
   - {fileID: 1541779462}
+  - {fileID: 1382480942}
