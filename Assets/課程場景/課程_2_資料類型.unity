@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   i1: 7.7
-  i2: 0.12345000356435776
+  i2: 0.12345
 --- !u!4 &1382480942
 Transform:
   m_ObjectHideFlags: 0
