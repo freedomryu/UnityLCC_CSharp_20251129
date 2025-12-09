@@ -10,6 +10,7 @@ namespace furi
     {
         private void Awake()
         {
+            #region while,do與for迴圈基本使用
             // 迴圈請在一次事件內使用 Awake Start
             // while 迴圈 : 當布林值為True 時會持續進行
             // while (布林值) {程式區塊}
@@ -37,6 +38,19 @@ namespace furi
             for (int k = 0; k < 7; k++)
             {
                 Debug.Log($"<color=#f79>do 迴圈, k : {k}</color>");
+            }
+            #endregion
+
+            // foreach 迴圈
+            // 資料結構 : 陣列、清單等等...
+            // foreach (資料類型 資料名稱 in 資料結構) {程式區塊}
+            // 字串就一種資料結構，用來存放 char 的陣列
+            string dialougue = "嗨，你好，我是 NPC~";
+            // foreach 迴圈將抓出 dialogue 的每一個字並存放在區域變數 text 內
+            // var 無類型
+            foreach (var text in dialougue)
+            {
+                Debug.Log($"<color=#f63>{text}</color>");  
             }
         }
     }
