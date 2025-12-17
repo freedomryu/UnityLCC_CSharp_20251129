@@ -1,20 +1,20 @@
-using furi.Tool;
+ï»¿using furi.Tool;
 using UnityEngine;
 namespace furi
 {
     /// <summary>
-    /// Ãş§O»Pµ²ºc®t²§
+    /// é¡åˆ¥èˆ‡çµæ§‹å·®ç•°
     /// </summary>
     public class Class_8_3_ClassAndStruct:MonoBehaviour
     {
         private void Awake()
         {
-            // 3. ªÅ­È¡GÃş§O¥i¥HªÅ­È µ²ºc¤£¦æ
-            Class_8_3_Class class1 = new Class_8_3_Class(); // ¦³¹ê¨Ò
-            Class_8_3_Class class2=null ;                   // ªÅ­È
+            // 3. ç©ºå€¼ï¼šé¡åˆ¥å¯ä»¥ç©ºå€¼ çµæ§‹ä¸è¡Œ
+            Class_8_3_Class class1 = new Class_8_3_Class(); // æœ‰å¯¦ä¾‹
+            Class_8_3_Class class2=null ;                   // ç©ºå€¼
 
-            Class_8_3_Struct struct1 = new Class_8_3_Struct(); // ¦³¹ê¨Ò
-            //Class_8_3_Struct struct2 = null;                 // ªÅ­È
+            Class_8_3_Struct struct1 = new Class_8_3_Struct(); // æœ‰å¯¦ä¾‹
+            //Class_8_3_Struct struct2 = null;                 // ç©ºå€¼
 
             LogSystem.LogWithColor(class1.ToString(), "#f96");
             // LogSystem.LogWithColor(class2.ToString(), "#f96");
@@ -23,35 +23,35 @@ namespace furi
         }
         private void Start()
         {
-            var testClass = new Class_8_4_Class("§Ú¬OÃş§O");
-            var testStruct = new Class_8_4_Struct("§Ú¬Oµ²ºc");
+            var testClass = new Class_8_4_Class("æˆ‘æ˜¯é¡åˆ¥");
+            var testStruct = new Class_8_4_Struct("æˆ‘æ˜¯çµæ§‹");
 
-            var testClass2 = new Class_8_4_Class("§Ú¬OÃş§O2");
-            var testStruct2 = new Class_8_4_Struct("§Ú¬Oµ²ºc2");
+            var testClass2 = new Class_8_4_Class("æˆ‘æ˜¯é¡åˆ¥2");
+            var testStruct2 = new Class_8_4_Struct("æˆ‘æ˜¯çµæ§‹2");
 
             LogSystem.LogWithColor(testClass.name, "#79f");
             LogSystem.LogWithColor(testClass2.name, "#79f");
             LogSystem.LogWithColor(testStruct.name, "#79f");
             LogSystem.LogWithColor(testStruct2.name, "#79f");
 
-            testClass = testClass2;     // ¶Ç§}¡G³o®É­Ôªºclass »P class2 «ü¦V¦P­Ó¦a§}
-            testStruct = testStruct2 ;  // ¶Ç­È¡G³o®É­Ôªºstruct »P struct2 «ü¦V¦P­Ó­È
+            testClass = testClass2;     // å‚³å€ï¼šé€™æ™‚å€™çš„class èˆ‡ class2 æŒ‡å‘åŒå€‹åœ°å€
+            testStruct = testStruct2 ;  // å‚³å€¼ï¼šé€™æ™‚å€™çš„struct èˆ‡ struct2 æŒ‡å‘åŒå€‹å€¼
 
-            // ­×§ï class ©Î class2 ¸ê®Æ³£·|¦P¨B
-            testClass.name = "Ãş§O";
+            // ä¿®æ”¹ class æˆ– class2 è³‡æ–™éƒ½æœƒåŒæ­¥
+            testClass.name = "é¡åˆ¥";
             LogSystem.LogWithColor(testClass.name, "#f79");
             LogSystem.LogWithColor(testClass2.name, "#f79");
 
-            // ­×§ï struct ©Î struct2 ¸ê®Æ·|¤£¦P¨B
-            testStruct.name = "µ²ºc";
+            // ä¿®æ”¹ struct æˆ– struct2 è³‡æ–™æœƒä¸åŒæ­¥
+            testStruct.name = "çµæ§‹";
             LogSystem.LogWithColor(testStruct.name, "#f79");
             LogSystem.LogWithColor(testStruct2.name, "#f79");
         }
     }
 
-    // Ãş§O:
-    // 1.Ä~©Ó:¤¹³\Ä~©Ó
-    // 2.«Øºc¤l¥i¥H¦³¦h­Ó«Øºc¤l
+    // é¡åˆ¥:
+    // 1.ç¹¼æ‰¿:å…è¨±ç¹¼æ‰¿
+    // 2.å»ºæ§‹å­å¯ä»¥æœ‰å¤šå€‹å»ºæ§‹å­
     public class Class_8_3_Class :MonoBehaviour
     {
         public Class_8_3_Class ()
@@ -64,9 +64,9 @@ namespace furi
         }
     }
 
-    // µ²ºc:
-    // 1.µ²ºc:¤£¤¹³\©Ó
-    // 2.«Øºc¤l:¤£¯à¦³µL°Ñ¼Æ«Øºc¤l
+    // çµæ§‹:
+    // 1.çµæ§‹:ä¸å…è¨±æ‰¿
+    // 2.å»ºæ§‹å­:ä¸èƒ½æœ‰ç„¡åƒæ•¸å»ºæ§‹å­
     public struct Class_8_3_Struct
     {
         // public Class_8_3_Struct()

@@ -12,5 +12,11 @@ namespace furi.Tool
             Debug.Log(result);
             return result;
         }
+        public static string LogWithColor(object message, string color)
+        {
+            string result = $"<color={color}>{message}</color>";
+            Debug.Log(result);
+            return result;
+        }
     }
 }
