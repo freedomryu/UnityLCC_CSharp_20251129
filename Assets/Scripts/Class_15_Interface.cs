@@ -1,7 +1,7 @@
 using furi.Tool;
 using UnityEngine;
 
-namespace furi
+namespace furi.Class_15
 {
     /// <summary>
     /// 介面 Interface
@@ -9,8 +9,9 @@ namespace furi
     public class Class_15_Interface:MonoBehaviour
     {
         public object invetoryFitsr;
+        public object invetory2;
 
-        
+
         private void Awake()
         {
             int random = Random.Range(0, 3);
@@ -19,6 +20,12 @@ namespace furi
             if (random == 0) invetoryFitsr = new Porp();
             else if (random == 1) invetoryFitsr = new Equip();
             else if (random == 2) invetoryFitsr = new Map();
+
+            int random2 = Random.Range(0, 3);
+
+            if (random2 == 0) invetory2 = new Weapon();
+            else if (random2 == 1) invetory2 = new Potion();
+            else if (random2 == 2) invetory2 = new Chest();
         }
 
         private void Update()
@@ -33,6 +40,15 @@ namespace furi
                 // 如果第一個是地圖，就使用地圖
                 else if (invetoryFitsr is Map) ((Map)invetoryFitsr).Use();
 
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                // 如果第二格道具的物品有時做介面 就使用
+                if (invetory2 is IUse) ((IUse)invetory2).Use();
+
+                if(invetory2 is IDestory) ((IDestory)invetory2).Destory();
+                // 如果物品擴充，判段式不需要添加 ，只需讓物品的都有實作介面即可
             }
         }
     }
