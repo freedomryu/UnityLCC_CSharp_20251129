@@ -1,5 +1,6 @@
 ﻿using furi.Class_15;
 using furi.Tool;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -59,6 +60,7 @@ namespace furi.Class_16
                 LogSystem.LogWithColor($"容量：{numbers.Capacity}", "#f39");
             }
             #endregion
+            #region 堆疊
             // 堆疊：先進後出，類似椅子堆再一起
             Stack<string> enemys = new Stack<string>();
             // 放資料進入堆疊機
@@ -67,15 +69,51 @@ namespace furi.Class_16
 
             LogStack<string>(enemys);
 
+            // 拿資料並且不移除
+            enemys.Peek();
+            // 拿資料並且移除
+            enemys.Pop();
+            // 判斷是否包含某比資料
+            LogSystem.LogWithColor($"{enemys.Contains("哥布林")}", "#3f6");
+            // 清除所有資料
+            enemys.Clear();
+
+            LogStack<string>(enemys);
+            #endregion
+            // Queue 佇列：先進先出，先放進來的資料先被拿出來
+            Queue<string> player = new Queue<string>();
+            player.Enqueue("盜賊");
+            player.Enqueue("法師");
+            player.Enqueue("戰士");
+
+            LogQueue<string>(player);
+            // 拿東西不刪除
+            LogSystem.LogWithColor(player.Peek(), "#f33");
+            // 拿東西並刪除
+            LogSystem.LogWithColor(player.Dequeue(), "#7f7");
+            LogQueue<string>(player);
 
         }
 
         private void LogStack<T>(Stack<T> stack)
         {
+            LogSystem.LogWithColor("------------", "#fff");
             foreach (var item in stack)
             {
+                
                 LogSystem.LogWithColor($"堆疊資料：{item}","#f77");
             }
         }
+
+        private void LogQueue<T>(Queue<T> queue)
+        {
+            LogSystem.LogWithColor("------------", "#fff");
+            foreach (var item in queue)
+            {
+
+                LogSystem.LogWithColor($"佇列資料：{item}", "#f77");
+            }
+        }
+
     }
 }
